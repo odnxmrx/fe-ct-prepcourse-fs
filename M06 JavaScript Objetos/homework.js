@@ -148,7 +148,6 @@ function agregarMetodoCalculoDescuento(objetoProducto) {
    objetoProducto.calcularPrecioDescuento = function(){
       return this.precio - this.precio * this.porcentajeDeDescuento;
    }
-
    return objetoProducto;
    //correcto al retornar el producto. PERO la instrucción decia "Retornar el precio final."
 }
