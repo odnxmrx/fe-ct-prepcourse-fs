@@ -171,7 +171,6 @@ function esPrimo(num) {
    for(let i = 1; i < num; i++) {
       if(num % i === 0) {
          conteoDivisores = conteoDivisores + 1;
-         console.log(conteoDivisores);
       }
       if(conteoDivisores > 2) {
          break;
