@@ -5,6 +5,15 @@ function mayuscula(nombre) {
    // Debe devolver el mismo nombre, pero con la primera letra en mayúscula.
    // [Ejemplo]: "mario" ----> "Mario".
    // Tu código:
+   let arrAux = nombre.split("");  // [m,a,r,i,o]
+   let cadenaAArr = nombre.toUpperCase().split(""); //[M,A,R,I,O]
+   let primerLetra = cadenaAArr[0]; //Toma la M mayuscula
+   arrAux.shift(); //elimina "m" del array en minuscula
+
+   arrAux.unshift(primerLetra); //agrega la "M" a la cadenaAux que esta en minusculas
+   let strFinal = arrAux.join(""); //convierte arr a str
+   return strFinal;
+
 }
 
 function invocarCallback(cb) {
@@ -47,12 +56,18 @@ function map(array, cb) {
    // Tiene que guardar el resultado devuelto por el callback en cada elemento dentro de un nuevo arreglo.
    // Retorna el nuevo arreglo.
    // Tu código:
+   let nuevoArr = array.map(function(item) {
+      return cb(item);
+   })
+   return nuevoArr;
 }
 
 function filter(arrayOfStrings) {
    // Debes identificar todos los elementos el arreglo que comiencen con la letra "a".
    // Luego retorna un nuevo arreglo con estos elementos.
    // Tu código:
+   let nuevoArr = arrayOfStrings.filter(cadena => cadena[0] === "a");
+   return nuevoArr;
 }
 
 /*⚠️ NO MODIFIQUES NADA DEBAJO DE ESTO ⚠️*/
